@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="time"></h1>
+    <p>Random Number</p> 
+
+    <p id="random"></p>
+    <script>
+        // Creating the blank new array
+        let array=new Array;
+        // Creating the Watch 
+      function fun(){
+        let samay= new Date();
+        const time=samay.getHours()+":"+samay.getMinutes()+":"+samay.getSeconds();
+        return time
+      }
+
+      setInterval(()=>{
+        const wa=document.querySelector('#time')
+        wa.innerHTML=fun();
+      })
+        console.log(time)
+        // Set the time interval of 3 secound and call the Random number function ,update the value on  the output screen.
+      setInterval(()=>{
+        array.push(RandomNumber())
+
+        for (const newarray of array) {
+           
+            const output=document.querySelector('#random')
+            output.style.color="red"
+            output.style.fontSize='34px'
+            output.innerHTML=`This is Random Number ${newarray}     and after 3 secound time is:-
+             ${Date()}`;
+        }
+      },3000)
+
+        function RandomNumber(){
+            let number=Math.floor(Math.random()*10000);
+            return number;
+        }
+    </script>
+</body>
+</html>

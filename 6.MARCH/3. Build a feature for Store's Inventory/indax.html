@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table id="tab">
+       
+    <!-- Starting the javascript Code -->
+    <script>
+        // Creating the array and fillup the Object in the array.
+        let itemsList=[
+            {item:'apple',itemPrice:45},
+            {item:'mango',itemPrice:485},
+            {item:'leptop',itemPrice:147},
+            {item:'iphone',itemPrice:4566},
+            {item:'sumsung',itemPrice:845},
+            {item:'bike',itemPrice:899},
+            
+        ];
+        // console.log(itemsList)  
+
+        // Using the Map High-Order Function.
+        let totalAmount=0
+        itemsList.map((items)=>{
+              totalAmount+=items.itemPrice
+        })
+        
+        console.log(` the total price in us dollar ${totalAmount}`)
+
+        // Creating the conversion us dollar into indian rupues.
+        function conversion(){
+            let indianrupues=80;
+            let totalAmountInIndianRupues=totalAmount*indianrupues;
+            return totalAmountInIndianRupues;
+        }
+        console.log(`The total indian rupues is:- ${conversion()}`)
+    </script>
+</body>
+</html>
